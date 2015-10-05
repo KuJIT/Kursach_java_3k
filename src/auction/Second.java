@@ -1,23 +1,12 @@
 package auction;
 
-import java.awt.BasicStroke;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.FontMetrics;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Polygon;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 import auction.First.person;
 
@@ -557,6 +546,13 @@ public class Second extends JFrame
 		
 		//Третий уровень
 		JButton bufBut = new JButton("Просмотр изменений");
+		bufBut.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Second.this.showChanges();
+				super.mouseClicked(e);
+			}
+		});
 		JButton bufBut1 = new JButton("Просмотр решения");
 		bufBut1.addMouseListener(new MouseAdapter() {
 			@Override
@@ -576,6 +572,23 @@ public class Second extends JFrame
 			
 		getContentPane().add(firstL);
 	
+	}
+
+	public void showChanges()
+	{
+		JFrame qvest = new JFrame();
+		qvest.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		JPanel pan = new JPanel();
+		pan.setLayout(new GridLayout(3,1,5,10));
+		JButton bufBut = new JButton("Ok");
+		JTextField bufTextField = new JTextField(4);
+		pan.add(new JLabel("Введите \"sx\" или \"bx\" для выбора x-того продавца или покупателя соответственно"));
+		pan.add(bufTextField);
+		pan.add(bufBut);
+		qvest.setContentPane(pan);
+		qvest.pack();
+		qvest.setVisible(true);
 	}
 
 
