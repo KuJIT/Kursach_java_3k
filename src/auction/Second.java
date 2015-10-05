@@ -445,10 +445,19 @@ public class Second extends JFrame
 			int c2 = w - ots;
 			v1 = revY(v1);
 
+
+
+
+
+
+			float[] dashl = {5,5};
+			BasicStroke pen = new BasicStroke(1,BasicStroke.CAP_ROUND,BasicStroke.JOIN_BEVEL,10,dashl,0);
+			g.setStroke(pen);
 			g.setColor(Color.GREEN);
 			g.drawLine(c1, v1, c2, v1 );
-			g.drawString("" + res.res.notMore, c1 + 2, v1 + 2);
 
+			g.setStroke(new BasicStroke());
+			g.drawString("" + res.res.notMore, c1 + 2, v1 + 2);
 			g.setColor(Color.BLACK);
 			
 		}

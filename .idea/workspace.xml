@@ -32,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="First.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="First.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/auction/First.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3801498">
-              <caret line="298" column="40" selection-start-line="298" selection-start-column="40" selection-end-line="298" selection-end-column="40" />
+            <state vertical-scroll-proportion="-2.7833333">
+              <caret line="61" column="19" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Second.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Second.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/auction/Second.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="533" column="37" selection-start-line="533" selection-start-column="20" selection-end-line="533" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.61829025">
+              <caret line="457" column="0" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
               <folding>
                 <element signature="class#MyColumns#0;class#Second#0" expanded="false" />
                 <element signature="class#Solut#0;class#Second#0" expanded="false" />
@@ -67,8 +67,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/auction/Second.java" />
         <option value="$PROJECT_DIR$/src/auction/First.java" />
+        <option value="$PROJECT_DIR$/src/auction/Second.java" />
       </list>
     </option>
   </component>
@@ -541,23 +541,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/auction/Second.java">
+    <entry file="file://$PROJECT_DIR$/src/auction/First.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="533" column="37" selection-start-line="533" selection-start-column="20" selection-end-line="533" selection-end-column="37" />
+        <state vertical-scroll-proportion="-2.7833333">
+          <caret line="61" column="19" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="19" />
           <folding>
-            <element signature="class#MyColumns#0;class#Second#0" expanded="false" />
-            <element signature="class#Solut#0;class#Second#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/auction/First.java">
+    <entry file="file://$PROJECT_DIR$/src/auction/Second.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3801498">
-          <caret line="298" column="40" selection-start-line="298" selection-start-column="40" selection-end-line="298" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.61829025">
+          <caret line="457" column="0" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="class#MyColumns#0;class#Second#0" expanded="false" />
+            <element signature="class#Solut#0;class#Second#0" expanded="false" />
           </folding>
         </state>
       </provider>
