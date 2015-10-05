@@ -33,6 +33,7 @@ public class First extends JFrame
 	JTextField tNumOfBuyers;
 	JTextField tNumOfSellers;
 	Second s;
+	boolean def;
 	
 	int numOfBuyers;
 	int numOfSellers;
@@ -82,6 +83,8 @@ public class First extends JFrame
 		super("Auction");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(400, 300);
+
+		this.def = JOptionPane.showConfirmDialog(new JButton(), "Использовать значения по умолчанию?") == JOptionPane.YES_OPTION;
 		
 		this.initComponents();
 		
@@ -158,6 +161,8 @@ public class First extends JFrame
 				super.mouseClicked(e);
 			}
 		});
+
+
 		
 		//Компоновка четвертый уровень
 		this.FourthLayerT_L_C.add(new JLabel("Кол:"));
@@ -187,6 +192,13 @@ public class First extends JFrame
 		
 		//Компоновка нулевой уровень
 		getContentPane().add(this.FirstLayer);
+
+		if (this.def)
+		{
+			this.tNumOfBuyers.setText("4");
+			this.tNumOfSellers.setText("4");
+			this.checkNums();
+		}
 	}
 	
 	void checkNums()
@@ -228,10 +240,18 @@ public class First extends JFrame
 			JPanel bufJPanel = new JPanel();
 			bufJPanel.setLayout(new GridLayout(1, 4));
 			bufJPanel.setBorder(new LineBorder(Color.BLACK, 1));
+			JTextField pBufTextField = new JTextField(2);
+			JTextField cBufTextField = new JTextField(2);
+
+			if (this.def)
+			{
+				pBufTextField.setText("" + (2 + i * 7));
+				cBufTextField.setText("22");
+			}
 			bufJPanel.add(new JLabel("цена:"));
-			bufJPanel.add(new JTextField(2));
+			bufJPanel.add(pBufTextField);
 			bufJPanel.add(new JLabel("кол-во:"));
-			bufJPanel.add(new JTextField(2));
+			bufJPanel.add(cBufTextField);
 			this.ThirdLayerC_L.add(bufJPanel);
 		}
 		
@@ -240,10 +260,18 @@ public class First extends JFrame
 			JPanel bufJPanel = new JPanel();
 			bufJPanel.setLayout(new GridLayout(1, 4));
 			bufJPanel.setBorder(new LineBorder(Color.BLACK, 1));
+			JTextField pBufTextField = new JTextField(2);
+			JTextField cBufTextField = new JTextField(2);
+
+			if (this.def)
+			{
+				pBufTextField.setText("" + (3 + i * 6));
+				cBufTextField.setText("21");
+			}
 			bufJPanel.add(new JLabel("цена:"));
-			bufJPanel.add(new JTextField(2));
+			bufJPanel.add(pBufTextField);
 			bufJPanel.add(new JLabel("кол-во:"));
-			bufJPanel.add(new JTextField(2));
+			bufJPanel.add(cBufTextField);
 			this.ThirdLayerC_R.add(bufJPanel);
 		}
 		

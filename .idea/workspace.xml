@@ -35,8 +35,8 @@
       <file leaf-file-name="First.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/auction/First.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7761989">
-              <caret line="305" column="1" selection-start-line="305" selection-start-column="1" selection-end-line="305" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.3801498">
+              <caret line="298" column="40" selection-start-line="298" selection-start-column="40" selection-end-line="298" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/src/auction/Second.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="573" column="1" selection-start-line="573" selection-start-column="1" selection-end-line="573" selection-end-column="1" />
+              <caret line="533" column="37" selection-start-line="533" selection-start-column="20" selection-end-line="533" selection-end-column="37" />
               <folding>
                 <element signature="class#MyColumns#0;class#Second#0" expanded="false" />
                 <element signature="class#Solut#0;class#Second#0" expanded="false" />
@@ -67,8 +67,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/auction/First.java" />
         <option value="$PROJECT_DIR$/src/auction/Second.java" />
+        <option value="$PROJECT_DIR$/src/auction/First.java" />
       </list>
     </option>
   </component>
@@ -360,7 +360,7 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -394,14 +394,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/auction/Second.java</url>
-          <line>493</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
@@ -552,7 +544,7 @@
     <entry file="file://$PROJECT_DIR$/src/auction/Second.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="573" column="1" selection-start-line="573" selection-start-column="1" selection-end-line="573" selection-end-column="1" />
+          <caret line="533" column="37" selection-start-line="533" selection-start-column="20" selection-end-line="533" selection-end-column="37" />
           <folding>
             <element signature="class#MyColumns#0;class#Second#0" expanded="false" />
             <element signature="class#Solut#0;class#Second#0" expanded="false" />
@@ -562,8 +554,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/auction/First.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7761989">
-          <caret line="305" column="1" selection-start-line="305" selection-start-column="1" selection-end-line="305" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.3801498">
+          <caret line="298" column="40" selection-start-line="298" selection-start-column="40" selection-end-line="298" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
