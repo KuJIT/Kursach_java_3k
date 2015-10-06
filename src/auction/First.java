@@ -324,7 +324,7 @@ public class First extends JFrame
 				int offer = Integer.parseInt(((JTextField)((JPanel)this.ThirdLayerC_R.getComponent(i)).getComponent(3)).getText());
 				this.sellers.add(new person(i + 1, price, offer));				
 			}
-			this.s = new Second(this.sellers, this.buyers);
+			this.s = new Second(this.sellers, this.buyers, this);
 			this.s.setVisible(true);
 			
 		}

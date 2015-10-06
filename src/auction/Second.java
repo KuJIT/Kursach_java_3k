@@ -20,6 +20,11 @@ public class Second extends JFrame
 	private static final long serialVersionUID = 2661813323188343104L;
 	ArrayList<First.person> sellers;
 	ArrayList<First.person> buyers;
+	First parant;
+	int fMinNotMore;
+	int fMaxNotMore;
+	int fMinPrice;
+	int fMaxPrice;
 	
 	class MyColumns
 	{
@@ -334,7 +339,12 @@ public class Second extends JFrame
 			int MaxNotMore = (this.cSellers.getMaxNotMore() > this.cBuyers.getMaxNotMore()) ? this.cSellers.getMaxNotMore() : this.cBuyers.getMaxNotMore();
 			int MinPrice = (this.cSellers.getMinPrice() < this.cBuyers.getMinPrice()) ? this.cSellers.getMinPrice() : this.cBuyers.getMinPrice();
 			int MinNotMore = (this.cSellers.getMinNotMore() < this.cBuyers.getMinNotMore()) ? this.cSellers.getMinNotMore() : this.cBuyers.getMinNotMore();
-			
+
+			Second.this.fMaxNotMore = MaxNotMore;
+			Second.this.fMinNotMore = MinNotMore;
+			Second.this.fMinPrice = MinPrice;
+			Second.this.fMaxPrice = MaxPrice;
+
 			int rc1 = this.res.res.c1;
 			int rc2 = this.res.res.c2;
 			int rnotMore = this.res.res.notMore;
@@ -477,7 +487,7 @@ public class Second extends JFrame
 		}
 	}
 	
-	public Second(ArrayList<person> sellers, ArrayList<person> buyers)
+	public Second(ArrayList<person> sellers, ArrayList<person> buyers, First parant)
 	{
 		super("Figure");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -485,6 +495,7 @@ public class Second extends JFrame
 		
 		this.sellers = sellers;
 		this.buyers = buyers;
+		this.parant = parant;
 		
 		this.initComponents();
 	}
@@ -586,6 +597,13 @@ public class Second extends JFrame
 
 	void finishit(String str, Boolean isSeller)
 	{
+
+		int num = Integer.parseInt(str);
+
+		for (int i = 0; i < 2 * fMaxPrice; i++)
+		{
+			//Solut bufSolut = new Solut()
+		}
 
 	}
 
