@@ -577,18 +577,41 @@ public class Second extends JFrame
 	public void showChanges()
 	{
 		JFrame qvest = new JFrame();
-		qvest.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		qvest.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
 		JPanel pan = new JPanel();
-		pan.setLayout(new GridLayout(3,1,5,10));
+	//	pan.setLayout(new GridLayout(3,1,5,10));
 		JButton bufBut = new JButton("Ok");
-		JTextField bufTextField = new JTextField(4);
-		pan.add(new JLabel("Введите \"sx\" или \"bx\" для выбора x-того продавца или покупателя соответственно"));
-		pan.add(bufTextField);
+	//	JTextField bufTextField = new JTextField(4);
+	//	pan.add(new JLabel("Введите \"sx\" или \"bx\" для выбора x-того продавца или покупателя соответственно"));
+	//	pan.add(bufTextField);
+	//	pan.add(bufBut);
+
+
+
+
+		Box box1 = Box.createVerticalBox();
+		JRadioButton rButonS = new JRadioButton("Продавец");
+		JRadioButton rButonB = new JRadioButton("Покупатель");
+		ButtonGroup bg = new ButtonGroup();
+		bg.add(rButonB);
+		bg.add(rButonS);
+		box1.add(rButonB);
+		box1.add(rButonS);
+
+		JComboBox combo = new JComboBox(new String[]{"1", "22"});
+
+		pan.setLayout(new FlowLayout());
+
+		pan.add(box1);
+		pan.add(combo);
 		pan.add(bufBut);
+
 		qvest.setContentPane(pan);
 		qvest.pack();
 		qvest.setVisible(true);
+
+
 	}
 
 
