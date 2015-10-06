@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 import auction.First.person;
 
@@ -574,6 +576,19 @@ public class Second extends JFrame
 	
 	}
 
+	void changeStateCombo(JRadioButton rButtonS, JComboBox combo)
+	{
+		int value = (rButtonS.isSelected())?(sellers.size()):(buyers.size());
+		combo.removeAllItems();
+		for(int i = 1; i <= value; i++)
+			combo.addItem("" + i);
+	}
+
+	void finishit(String str, Boolean isSeller)
+	{
+
+	}
+
 	public void showChanges()
 	{
 		JFrame qvest = new JFrame();
@@ -582,24 +597,44 @@ public class Second extends JFrame
 		JPanel pan = new JPanel();
 	//	pan.setLayout(new GridLayout(3,1,5,10));
 		JButton bufBut = new JButton("Ok");
+
 	//	JTextField bufTextField = new JTextField(4);
 	//	pan.add(new JLabel("Введите \"sx\" или \"bx\" для выбора x-того продавца или покупателя соответственно"));
 	//	pan.add(bufTextField);
 	//	pan.add(bufBut);
 
 
-
+		JComboBox combo = new JComboBox();
 
 		Box box1 = Box.createVerticalBox();
 		JRadioButton rButonS = new JRadioButton("Продавец");
+		rButonS.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				Second.this.changeStateCombo(rButonS, combo);
+			}
+		});
 		JRadioButton rButonB = new JRadioButton("Покупатель");
+		rButonB.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				Second.this.changeStateCombo(rButonS, combo);
+			}
+		});
+		bufBut.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Second.this.finishit((String)combo.getSelectedItem(), rButonS.isSelected());
+				super.mouseClicked(e);
+			}
+		});
 		ButtonGroup bg = new ButtonGroup();
 		bg.add(rButonB);
 		bg.add(rButonS);
 		box1.add(rButonB);
 		box1.add(rButonS);
 
-		JComboBox combo = new JComboBox(new String[]{"1", "22"});
+
 
 		pan.setLayout(new FlowLayout());
 
@@ -613,7 +648,4 @@ public class Second extends JFrame
 
 
 	}
-
-
-
 }

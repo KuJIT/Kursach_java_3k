@@ -199,6 +199,7 @@ public class First extends JFrame
 			this.tNumOfSellers.setText("4");
 			this.checkNums();
 		}
+
 	}
 	
 	void checkNums()
@@ -283,7 +284,8 @@ public class First extends JFrame
 		this.FirstLayer.add(this.SecondLayerC);
 		this.getContentPane().validate();
 		this.pack();
-		this.getContentPane().repaint();	
+		this.getContentPane().repaint();
+		//this.def = false;
 	}
 	
 	void checkAll()
