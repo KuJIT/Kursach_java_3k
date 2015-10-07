@@ -25,6 +25,46 @@ public class Second extends JFrame
 	int fMaxNotMore;
 	int fMinPrice;
 	int fMaxPrice;
+
+	Solut fSol;
+
+	ArrayList<First.person> myCloneSellers()
+	{
+		ArrayList<person> res = new ArrayList<person>();
+		for (person elem : this.parant.sellers)
+		{
+			res.add(elem.myClone());
+		}
+		return res;
+	}
+
+	ArrayList<person> myCloneBuyers()
+	{
+		ArrayList<person> res = new ArrayList<person>();
+		for (person elem : this.parant.buyers)
+		{
+			res.add(elem.myClone());
+		}
+		return res;
+	}
+
+	ArrayList<person> changeVinAL(ArrayList<person> AL, int num, int val, boolean price)
+	{
+		for (person elem : AL)
+		{
+			if (elem.id == num)
+			{
+				if (price)
+					elem.price = val;
+				else
+				{
+					elem.offer = val;
+					elem.notMore = val;
+				}
+			}
+		}
+		return AL;
+	}
 	
 	class MyColumns
 	{
@@ -309,6 +349,7 @@ public class Second extends JFrame
 			this.cSellers = new MyColumns(Second.this.sellers, false);
 			this.cBuyers = new MyColumns(Second.this.buyers, true);
 			res = new Solut(cSellers, cBuyers);
+			Second.this.fSol = res;
 			System.out.println("c1 = " + res.res.c1 + " c2 = " + res.res.c2 + " notMore = " + res.res.notMore);
 		}
 
@@ -599,11 +640,52 @@ public class Second extends JFrame
 	{
 
 		int num = Integer.parseInt(str);
+		MyColumns cSellerB;
+		MyColumns cBuyersB;
+		int falses = 0;
 
-		for (int i = 0; i < 2 * fMaxPrice; i++)
+		boolean[] chP = new boolean[2 * fMaxPrice + 2];
+
+		for (int i = 0; i <= 2 * fMaxPrice + 1; i++)
 		{
-			//Solut bufSolut = new Solut()
+			if (isSeller)
+			{
+				cSellerB = new MyColumns(changeVinAL(this.myCloneSellers(), num, i, true), false);
+				cBuyersB = new MyColumns(this.myCloneBuyers(), true);
+			}
+			else
+			{
+				cSellerB = new MyColumns(this.myCloneSellers(), false);
+				cBuyersB = new MyColumns(changeVinAL(this.myCloneBuyers(), num, i, true), true);
+			}
+			Solut bufSolut = new Solut(cSellerB, cBuyersB);
+			if ((bufSolut.res.c1 == this.fSol.res.c1) && (bufSolut.res.c2 == this.fSol.res.c2))
+			{
+				chP[i] = false;
+				falses ++;
+			}
+			else
+				chP[i] = true;
 		}
+		boolean ne = ((2 * falses )< (2 * fMaxPrice + 2));
+
+		String mess = "Цена аукциона " + ((!ne)?(""):("не ")) + "изменится, если "
+				+ ((isSeller)?("продавец "): ("покупатель ")) + num + " сменит цену на:\n";
+		for (int i = 0; i < 2 * fMaxPrice + 2; i++)
+		{
+			if (ne)
+			{
+				if (!chP[i])
+					mess += "" + i + ";\n";
+			}
+			else
+			{
+				if (chP[i])
+					mess += "" + i + ";\n";
+			}
+		}
+
+		JOptionPane.showMessageDialog(null, mess);
 
 	}
 

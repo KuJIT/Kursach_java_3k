@@ -68,6 +68,14 @@ public class First extends JFrame
 			this.offer = offer;	
 			this.notMore = offer;
 		}
+
+
+		person myClone()
+		{
+			person res = new person(this.id, this.price, this.offer);
+			//resotMore = this.notMore;
+			return res;
+		}
 		
 		@Override
 		public int compareTo(Object arg0) 
